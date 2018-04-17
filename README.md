@@ -12,3 +12,12 @@ II) Arduino Code
    1. Requirements to run
       a) arduino board
       b) **arduino code program**
+
+III) Materials
+   1. Piezoelectric Sensor 
+   2. Assembled Pi Cobbler Plus - Breakout Cable
+   3. Adafruit MCP3008 8-Channel 10-Bit ADC With SPI Interface for Raspberry Pi
+   4. Wires
+   5. Raspberry Pi 3	
+   6. Breadboards
+
