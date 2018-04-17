@@ -1,0 +1,18 @@
+{% extends 'website/base.html' %}
+
+{% block body %}
+<div class='container'>
+  <table class='table'>
+    <thead>
+      <tr>
+	<th>Building</th>
+	<th>Room Number</th>
+	<th>Availability</th>
+      </tr>
+    </thead>
+    {% for room in rooms.Items %}
+      <tr {% if room.Available %} style="background-color:green" {% else %} style="background-color:red" {% endif %}><td>{{room.Building}}</td><td>{{room.Room}}</td><td>{% if room.Available %} Open {% else %} Not Available {% endif %}</td></tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

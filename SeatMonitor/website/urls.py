@@ -5,5 +5,6 @@ from django.views.generic.base import TemplateView
 app_name = 'SeatMonitor'
 
 urlpatterns = [
-    path('index/', TemplateView.as_view(template_name='website/index.html'), name='index'),
+    path('index/', views.index, name='index'),
+    path('detail/<slug:building>/', views.detail, name='detail'),
 ]

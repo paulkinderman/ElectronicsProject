@@ -2,6 +2,24 @@
 
 {% block body %}
 
+{{ request.buildings }}
+{% for building in buildings.Items %}
+
+<div class="col-sm-4 col-lg-2">
+  <div class="thumbnail">
+    <a href="{% url 'SeatMonitor:detail' building.Building %}">
+          <img src="{{ building.PictureUrl }}" style="width:700px; height:auto;">
+    </a>
+    <div class="caption">
+      <h2>{{ building.Building }}</h2>
+      
+          <a href="{% url 'SeatMonitor:detail' building.Building %}" class="btn btn-primary btn-sm" role="button">View Details</a>
+	    
+    </div>
+  </div>
+</div>
+
+{% endfor %}
 Initial page
 
 {% endblock %}
