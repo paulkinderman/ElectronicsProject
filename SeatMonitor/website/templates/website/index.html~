@@ -1,0 +1,7 @@
+{% extends 'website/base.html' %}
+
+{% block body %}
+
+<a href="{% url 'SeatMonitor:detailMLC' 1 %}">MLC Rooms</a>
+
+{% endblock %}
