@@ -6,8 +6,8 @@ I) SeatMonitor
       B) awscli (pip install awscli)
          i) setup
             a) set the following environment variables
-               aws_access_key_id = AKIAIEHXCGSMBLGMYJGQ
-               aws_secret_access_key = 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
+               aws_access_key_id = AKIAIF4O7WBQ2LZMUXEQ
+               aws_secret_access_key = 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
       C) boto3 (pip install boto3)
    2. Description
       This app uses information from a Postgres DB table in AWS to display which study rooms are available in specific buildings on UGA's Campus.
