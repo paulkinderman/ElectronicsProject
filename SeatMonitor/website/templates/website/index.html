@@ -7,13 +7,13 @@
 
 <div class="col-sm-4 col-lg-2">
   <div class="thumbnail">
-    <a href="{% url 'SeatMonitor:detail' building.Building %}">
+    <a href="{% url 'SeatMonitor:detail' building.BuildingName %}">
           <img src="{{ building.PictureUrl }}" style="width:700px; height:auto;">
     </a>
     <div class="caption">
-      <h2>{{ building.Building }}</h2>
+      <h2>{{ building.BuildingName }}</h2>
       
-          <a href="{% url 'SeatMonitor:detail' building.Building %}" class="btn btn-primary btn-sm" role="button">View Details</a>
+          <a href="{% url 'SeatMonitor:detail' building.BuildingName %}" class="btn btn-primary btn-sm" role="button">View Details</a>
 	    
     </div>
   </div>

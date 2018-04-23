@@ -7,7 +7,7 @@ from django.template import loader
 
 # Create your views here.
 def index(request):
-    dynamodb = boto3.resource('dynamodb', region_name='us-east-1', endpoint_url="https://dynamodb.us-east-1.amazonaws.com")
+    dynamodb = boto3.resource('dynamodb', region_name='us-east-2', endpoint_url="https://dynamodb.us-east-2.amazonaws.com")
     table = dynamodb.Table('Buildings')
 #   response = table.query(
 #       KeyConditionExpression=Key('Building').eq('MLC')
@@ -17,6 +17,7 @@ def index(request):
 #       print(i['Room Number'])
     response = table.scan()
 #    request.session['buildings'] = response
+    print(response)
     template = loader.get_template('website/index.html')
     context = {
         'buildings': response,
@@ -24,8 +25,8 @@ def index(request):
     return HttpResponse(template.render(context, request))
 
 def detail(request, building):
-     dynamodb = boto3.resource('dynamodb', region_name='us-east-1', endpoint_url="https://dynamodb.us-east-1.amazonaws.com")
-     table = dynamodb.Table('SeatMonitor')
+     dynamodb = boto3.resource('dynamodb', region_name='us-east-2', endpoint_url="https://dynamodb.us-east-2.amazonaws.com")
+     table = dynamodb.Table('StudyRoom')
      response = table.query(                                                                                                    
          KeyConditionExpression=Key('Building').eq(building)
      )

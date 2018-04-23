@@ -11,7 +11,7 @@
       </tr>
     </thead>
     {% for room in rooms.Items %}
-      <tr {% if room.Available %} style="background-color:green" {% else %} style="background-color:red" {% endif %}><td>{{room.Building}}</td><td>{{room.Room}}</td><td>{% if room.Available %} Open {% else %} Not Available {% endif %}</td></tr>
+      <tr {% if room.Available %} style="background-color:green" {% else %} style="background-color:red" {% endif %}><td>{{room.Building}}</td><td>{{room.RoomNumber}}</td><td>{% if room.Available %} Open {% else %} Not Available {% endif %}</td></tr>
     {% endfor %}
   </table>
 </div>
