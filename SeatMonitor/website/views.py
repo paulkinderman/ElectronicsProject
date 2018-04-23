@@ -9,15 +9,7 @@ from django.template import loader
 def index(request):
     dynamodb = boto3.resource('dynamodb', region_name='us-east-2', endpoint_url="https://dynamodb.us-east-2.amazonaws.com")
     table = dynamodb.Table('Buildings')
-#   response = table.query(
-#       KeyConditionExpression=Key('Building').eq('MLC')
-#       )
-#   print(response)
-#   for i in response['Items']:
-#       print(i['Room Number'])
     response = table.scan()
-#    request.session['buildings'] = response
-    print(response)
     template = loader.get_template('website/index.html')
     context = {
         'buildings': response,
